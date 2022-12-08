@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link href="https://fonts.googleapis.com/css?family=Roboto:100,100italic,300,300italic,regular,italic,500,500italic,700,700italic,900,900italic" rel="stylesheet"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script type="text/javascript" src="/lib/paper-full.min.js"></script>
+    <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="/css/game.css">
+    <title>DIVIDE</title>
+    <script type="text/paperscript" src="/js/cutting.js" canvas="gameCanvas"></script>
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+</head>
+<body>
+    <div class="wrapper">
+        <main class="page">
+            <div class="game__game _container">
+                <div class="game__menu">
+                    <div class="game__rules">
+                        <div class="game__best_score game__rule">
+                        </div>
+                        <div class="game__cuts game__rule">
+                        </div>
+                        <div class="game__figure game__rule">
+                        </div>
+                        <div class="game__time game__rule">
+                        </div>
+                    </div>
+                </div>
+                <canvas id="gameCanvas" class="canvas__class"></canvas>
+                <div class="buttons">
+                    <div class="button" onclick="Exit()">
+                        <div class="button__text">Exit</div>
+                    </div>
+                    <div class="button" onclick="SetCut()">
+                        <div class="button__text">Cut</div>
+                    </div>
+                    <div class="button" onclick="SetMove()">
+                        <div class="button__text">Move</div>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+</body>
+<script type="text/javascript" src="/js/game.js"></script>
+</html>

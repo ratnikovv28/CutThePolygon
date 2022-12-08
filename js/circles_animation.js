@@ -1,8 +1,7 @@
-function generateRandomColorHex() {
-	return "#" + ("00000" + Math.floor(Math.random() * Math.pow(16, 6)).toString(16)).slice(-6);
-  }
+/* ----Анимация заставки---------------------------------------------- */
 
-var color = generateRandomColorHex();
+var color = localStorage.getItem('GameColor', color);
+
 // The amount of circles we want to make:
 var count = 100;
 
@@ -43,9 +42,8 @@ function onFrame(event) {
 	}
 }
 
-var gameTitle = document.getElementsByClassName('game__title');
-gameTitle[0].style.border = "10px solid " + color;
-var gameName = document.getElementsByClassName('game__name');
-gameName[0].style.color = color;
-var startButton = document.getElementsByClassName('start_game__button');
-startButton[0].style.backgroundColor = color;
+/* ----Смена стилей---------------------------------------------- */
+
+localStorage.setItem('GameColor', color);
+
+

@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link href="https://fonts.googleapis.com/css?family=Roboto:100,100italic,300,300italic,regular,italic,500,500italic,700,700italic,900,900italic" rel="stylesheet"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script type="text/javascript" src="/lib/paper-full.min.js"></script>
+    <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="/css/level.css">
+    <script type="text/paperscript" src="/js/circles_animation.js" canvas="circlesCanvas"></script>
+    <title>DIVIDE</title>
+</head>
+<body>
+    <div class="wrapper">
+        <canvas id="circlesCanvas" class="canvas__class"></canvas>
+        <main class="page">
+            <div class="game__levels _container">
+                <div class="game__title">
+                    <div class="game__name">DiViDE</div>
+                </div>
+                <div class="levels">
+                    <div class="levels__row">
+                        <div class="level" onclick="GoToLevel1()">
+                            <div class="level__number">1</div>
+                        </div>
+                        <div class="level" onclick="GoToLevel2()">
+                            <div class="level__number">2</div>
+                        </div>
+                        <div class="level" onclick="GoToLevel3()">
+                            <div class="level__number">3</div>
+                        </div>
+                        <div class="level" onclick="GoToLevel4()">
+                            <div class="level__number">4</div>
+                        </div>
+                    </div>
+                    <div class="levels__row">
+                        <div class="level" onclick="GoToLevel5()">
+                            <div class="level__number">5</div>
+                        </div>
+                        <div class="level" onclick="GoToLevel6()">
+                            <div class="level__number">6</div>
+                        </div>
+                        <div class="level" onclick="GoToLevel7()">
+                            <div class="level__number">7</div>
+                        </div>
+                        <div class="level" onclick="GoToLevel8()">
+                            <div class="level__number">8</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="buttons">
+                    <div class="button" onclick="Exit()">
+                        <div class="button__text">Exit</div>
+                    </div>
+                    <div class="button" onclick="Scoreboard()">
+                        <div class="button__text">ScoreBoard</div>
+                    </div>
+                </div>
+            </div>           
+        </main>
+    </div>
+</body>
+<script type="text/javascript" src="/js/config.js"></script>
+<script type="text/javascript" src="/js/level.js"></script>
+</html>

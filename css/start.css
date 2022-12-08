@@ -28,7 +28,7 @@
     width: auto;
     font-family: Roboto;
     font-weight: bold;
-    margin: 0 0 50px;
+    margin: 0 0 30px;
 }
 
 .start_game__button{
@@ -41,6 +41,23 @@
     font-weight: bold;
     border-radius: 5px;
     display: flex;
+    font-weight: bold;
+}
+
+.game__nickname{
+    width: 300px;
+    height: 35px;
+    margin: 0 0 40px;
+    background-color: transparent;
+    color: white;
+    font-family: Roboto;
+    font-size: 24px;
+    text-align: center;
+    border-radius: 5px;
+}
+
+.game__nickname::placeholder{
+    color: white;
 }
 
 /* ----Canvas-------------------------------------------------- */

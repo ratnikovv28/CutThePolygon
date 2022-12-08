@@ -7,24 +7,29 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script type="text/javascript" src="/lib/paper-full.min.js"></script>
     <link rel="stylesheet" href="/css/style.css">
-    <link rel="stylesheet" href="/css/start.css">
+    <link rel="stylesheet" href="/css/scoreboard.css">
     <script type="text/paperscript" src="/js/circles_animation.js" canvas="circlesCanvas"></script>
-    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
     <title>DIVIDE</title>
 </head>
 <body>
     <div class="wrapper">
         <canvas id="circlesCanvas" class="canvas__class"></canvas>
         <main class="page">
-            <div class="game__start _container">
+            <div class="game__scoreboard _container">
                 <div class="game__title">
                     <div class="game__name">DiViDE</div>
-                    <input class="game__nickname" type="text" placeholder="Nickname">
-                    <div class="start_game__button" onclick="StartGame()">PLAY GAME</div>
+                </div>
+                <div class="scoreboard">
+                    <ul></ul>
+                </div>
+                <div class="buttons">
+                    <div class="button" onclick="Exit()">
+                        <div class="button__text">Exit</div>
+                    </div>
                 </div>
             </div>
         </main>
     </div>
 </body>
-<script type="text/javascript" src="/js/start.js"></script>
+<script type="text/javascript" src="/js/scoreboard.js"></script>
 </html>
