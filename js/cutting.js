@@ -1,23 +1,24 @@
 /* ----Settings---------------------------------------------- */
 
-var rules = JSON.parse(localStorage.getItem('CurrentLevel'));
-var currentLevel = rules.level;
-var figure = rules.figure;
-var figures = rules.figures;
-var cutsCount = rules.cutsCount;
-var timeLimit = rules.timeLimit;
+var rules = JSON.parse(localStorage.getItem('CurrentLevel')); // Получение информации по текущему выбранному уровню из LocalStorage
+var currentLevel = rules.level; //Номер текущего уровня
+var figure = rules.figure; //Количество углов фигуры
+var figures = rules.figures; //Количество фигур на которое нужно разрезать 
+var cutsCount = rules.cutsCount; //Количество линий
+var timeLimit = rules.timeLimit; //Ограничение по времени
 
-swal("Задание", "Разрезать фигуру на " + figures + ", используя до " + cutsCount + " линий");
+//Отображение информации по уровню
+swal("Задание", "Разрезать фигуру на " + figures + 
+        ", используя до " + cutsCount + " линий за " + timeLimit + "секунд"); 
 
+//Устанавливается режим Mode = true, что означает разрезание фигур.
+//Mode = false - передвижение фигур 
 localStorage.setItem('Mode', true);
 
-var cutsNow;
-var figuresNow;
-
-var gameCuts = document.getElementsByClassName('game__cuts')[0];
-var gameFigures = document.getElementsByClassName('game__figure')[0]; 
-var gameTime = document.getElementsByClassName('game__time')[0];
-var gameBestScore = document.getElementsByClassName('game__best_score')[0];
+var gameCuts = document.getElementById('game__cuts');
+var gameFigures = document.getElementById('game__figure'); 
+var gameTime = document.getElementById('game__time');
+var gameBestScore = document.getElementById('game__best_score');
 
 var currentPlayer = localStorage.getItem('CurrentPlayer');
 var currentPlayerScores = JSON.parse(localStorage.getItem(currentPlayer));
@@ -57,6 +58,8 @@ var canvas = document.getElementById('gameCanvas');
 var startPointX = canvas.width / 2;
 var startPointY = canvas.height / 2;
 
+var cutsNow;
+var figuresNow;
 var polygon;
 var shapesArray;
 var flagCut;

@@ -1,11 +1,11 @@
 /* ----Анимация заставки---------------------------------------------- */
 
-var color = localStorage.getItem('GameColor', color);
+var color = localStorage.getItem('GameColor', color); //Цвет игры
 
-// The amount of circles we want to make:
+// Количество кружков, которое должно быть
 var count = 100;
 
-// Create a symbol, which we will use to place instances of later:
+// Создаем элемент(символ), который мы будем использовать для размещения экземпляров позже
 var path = new Path.Circle({
 	center: [0, 0],
 	radius: 10,
@@ -15,27 +15,26 @@ var path = new Path.Circle({
 
 var symbol = new Symbol(path);
 
-// Place the instances of the symbol:
+// Создаем экземпляры кружков
 for (var i = 0; i < count; i++) {
-	// The center position is a random point in the view:
+	// Центральное положение является случайной точкой в ​​представлении
 	var center = Point.random() * view.size;
 	var placedSymbol = symbol.place(center);
 	placedSymbol.scale(i / count);
 }
 
-// The onFrame function is called up to 60 times a second:
+// Функция onFrame вызывается до 60 раз в секунду
 function onFrame(event) {
-	// Run through the active layer's children list and change
-	// the position of the placed symbols:
+	// Пройтись по списку дочерних элементов активного слоя 
+	//и измените положение размещенных символов:
 	for (var i = 0; i < count; i++) {
 		var item = project.activeLayer.children[i];
 		
-		// Move the item 1/20th of its width to the right. This way
-		// larger circles move faster than smaller circles:
+		// Переместите элемент на 1/20 его ширины вправо. 
+		//Таким образом, большие круги движутся быстрее, чем маленькие круги
 		item.position.x += item.bounds.width / 20;
 
-		// If the item has left the view on the right, move it back
-		// to the left:
+		// Если элемент покинул вид справа, переместите его обратно влево
 		if (item.bounds.left > view.size.width) {
 			item.position.x = -item.bounds.width;
 		}

@@ -26,8 +26,8 @@ gameRule[1].style.border = "6px solid " + color;
 gameRule[2].style.border = "6px solid " + color;
 gameRule[3].style.border = "6px solid " + color;
 
-var canvas = document.getElementsByClassName('canvas__class');
-canvas[0].style.border = "6px solid " + color;
+var canvas = document.getElementById('gameCanvas');
+canvas.style.border = "6px solid " + color;
 
 var buttons = document.getElementsByClassName('button');
 buttons[0].style.backgroundColor = color;

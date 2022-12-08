@@ -1,9 +1,3 @@
-.page{
-    width: 100%;
-    height: 100%;
-    z-index: 5;
-}
-
 /* ----Game-------------------------------------------------- */
 
 .game__game{
@@ -34,41 +28,10 @@
     border-radius: 5px;
 }
 
-.game__cuts {
-}
-
-.game__figure {
-}
-
-/* ----Buttons-block---------------------------------------------- */
-
-.buttons{
-    width: 800px;
-    height: 100px;
-    display: flex;
-    justify-content: space-evenly;
-    align-items: center;
-}
-
-.button{
-    width: 150px;
-    height: 50px;
-    border-radius: 15px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-weight: bold;
-}
-
-.button__text{
-    font-family: Roboto;
-    font-size: 24px;
-}
-
 /* ----Canvas-------------------------------------------------- */
 
-.canvas__class{
+.game__canvas__class{
     width: 90%;
-    border-radius: 10px;
     height: 600px;
+    border-radius: 10px;
 }
