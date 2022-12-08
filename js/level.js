@@ -1,7 +1,7 @@
 /* ----Функции-и-события---------------------------------------------- */
 
 function Exit(){
-    document.location.href = "/page/start.html"; //Переходим на страницу заставки
+    document.location.href = "/index.html"; //Переходим на страницу заставки
 }
 
 function Scoreboard(){
