@@ -1,19 +1,28 @@
-/* ----Функции и события---------------------------------------------- */
-
-function generateRandomColorHex() {
-	return "#" + ("00000" + Math.floor(Math.random() * Math.pow(16, 6)).toString(16)).slice(-6);
-}
+/* ----Настройки---------------------------------------------- */
 
 var color = generateRandomColorHex();
 localStorage.setItem('GameColor', color);
 
+var nickName = document.getElementById('game__nickname');
+
+/* ----Функции-------------------------------------------------- */
+
+//Генерация случайного цвета
+function generateRandomColorHex() {
+	return "#" + ("00000" + Math.floor(Math.random() * Math.pow(16, 6)).toString(16)).slice(-6);
+}
+
 //Запуск игры
 function StartGame(){
     // localStorage.clear()
-    var nicknameText = document.getElementsByClassName('game__nickname')[0].value; //Имя пользователя из поля
+    var nicknameText = nickName.value; //Имя пользователя из поля
+
     if(isEmpty(nicknameText)){
-        swal({
-            title:"Нужно ввести имя!"
+        Swal.fire({
+            title:"Нужно ввести имя!",
+            confirmButtonColor: '#000000',
+            background: color, 
+            color: '#000000'
         });
     }
     else{
@@ -36,29 +45,31 @@ function StartGame(){
     }
 }
 
-//Событие нажатия кнопки "Enter"
-var nickNameInput = document.getElementsByClassName('game__nickname')[0];
-nickNameInput.addEventListener("keypress", function(event) {
-    if (event.key === "Enter") {
-      event.preventDefault();
-      StartGame();
-    }
-  });
-
-//Проверяет пустая строка или нет
+//Проверка на пустую строку
 function isEmpty(str) { 
     return str.trim() == '';
 }
 
+/* ----События--------------------------------------------------- */
+
+//Событие нажатия кнопки "Enter"
+nickName.addEventListener("keypress", function(event) {
+    if (event.key === "Enter") {
+      event.preventDefault();
+      StartGame();
+    }
+});
+
 /* ----Смена стилей---------------------------------------------- */
 
+var gameTitle = document.getElementById('game__title');
+gameTitle.style.border = "10px solid " + color;
 
-var gameTitle = document.getElementsByClassName('game__title');
-gameTitle[0].style.border = "10px solid " + color;
-var gameName = document.getElementsByClassName('game__name');
-gameName[0].style.color = color;
-var startButton = document.getElementsByClassName('start_game__button');
-startButton[0].style.backgroundColor = color;
-var nickname = document.getElementsByClassName('game__nickname');
-nickname[0].style.border = "3px solid " + color;
-nickname[0].style.color = color;
+var gameName = document.getElementById('game__name');
+gameName.style.color = color;
+
+var startButton = document.getElementById('start_game__button');
+startButton.style.backgroundColor = color;
+
+nickName.style.border = "3px solid " + color;
+nickName.style.color = color;

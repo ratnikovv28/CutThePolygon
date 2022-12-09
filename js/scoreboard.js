@@ -1,19 +1,19 @@
-var scoreboard = document.getElementsByClassName('scoreboard')[0];
+/* ----Настройки---------------------------------------------- */
 
-console.log('Test')
+var scoreboard = document.getElementById('scoreboard');
+
 allStorage();
 
+/* ----Функции---------------------------------------------------- */
 
-/* ----Функции-и-события---------------------------------------------- */
-
+//Переход на страницу с уровнями
 function Exit(){
-    document.location.href = "/page/level.html"; //Переходим на страницу заставки
+    document.location.href = "/page/level.html"; 
 }
 
+//Получение и добавление информации о результатах игроков
 function allStorage() {
-
-    var archive = {}, 
-        keys = Object.keys(localStorage),
+    var keys = Object.keys(localStorage),
         i = keys.length;
 
     while ( i-- ) {
@@ -26,19 +26,17 @@ function allStorage() {
             scoreboard.appendChild(playerScore);
         }
     }
-
-    return archive;
 }
 
 /* ----Смена-стилей---------------------------------------------- */
 
 var color = localStorage.getItem('GameColor', color);
 
-var gameName = document.getElementsByClassName('game__name');
-gameName[0].style.color = color;
+var gameName = document.getElementById('game__name');
+gameName.style.color = color;
 
 scoreboard.style.border = "7px solid " + color;
 scoreboard.style.color = color;
 
-var buttons = document.getElementsByClassName('button');
-buttons[0].style.backgroundColor = color;
+var buttons = document.getElementById('button');
+buttons.style.backgroundColor = color;

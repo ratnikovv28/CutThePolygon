@@ -9,7 +9,7 @@
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/start.css">
     <script type="text/paperscript" src="js/circles_animation.js" canvas="circlesCanvas"></script>
-    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <title>DIVIDE</title>
 </head>
 <body>
@@ -17,10 +17,10 @@
         <canvas id="circlesCanvas" class="canvas__class"></canvas>
         <main class="page">
             <div class="game__start _container">
-                <div class="game__title">
-                    <div class="game__name">DiViDE</div>
-                    <input class="game__nickname" type="text" placeholder="Nickname">
-                    <div class="start_game__button" onclick="StartGame()">PLAY GAME</div>
+                <div id="game__title" class="game__title">
+                    <div id="game__name" class="game__name">DiViDE</div>
+                    <input id="game__nickname" class="game__nickname" type="text" placeholder="Nickname">
+                    <div id="start_game__button" class="start_game__button" onclick="StartGame()">PLAY GAME</div>
                 </div>
             </div>
         </main>

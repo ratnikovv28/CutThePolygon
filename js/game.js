@@ -1,4 +1,4 @@
-/* ----Функции-и-события---------------------------------------------- */
+/* ----Функции------------------------------------------------- */
 
 function Exit(){
     document.location.href = "/page/level.html"; //Переходим на страницу c игрой в соотвествии с уровнем
@@ -34,5 +34,3 @@ buttons[0].style.backgroundColor = color;
 buttons[1].style.backgroundColor = color;
 buttons[1].style.border = "4px solid white";
 buttons[2].style.backgroundColor = color;
-
-var alertMessage = document.getElementsByClassName('game__popup_box');
