@@ -6,7 +6,7 @@
     justify-content: center;
 }
 
-.game__name{
+#game__name{
     font-size: 100px;
     width: auto;
     font-family: Roboto;
@@ -26,7 +26,7 @@
     flex-direction: column;
 }
 
-.scoreboard{
+#scoreboard{
     width: 300px;
     height: 400px;
     list-style: none;

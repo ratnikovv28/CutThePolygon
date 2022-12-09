@@ -19,7 +19,8 @@ Swal.fire({
             ", используя до " + cutsCount + " линий за " + timeLimit + " секунд",
             confirmButtonColor: '#000000',
             background: color, 
-            color: '#000000'
+            color: '#000000',
+            heightAuto: false
         }); 
 
 //Устанавливается режим Mode = true, что означает разрезание фигур.
@@ -235,7 +236,8 @@ function splitShape(path1, path2){
             icon: "success",
             confirmButtonColor: '#000000',
             background: color, 
-            color: '#000000'
+            color: '#000000',
+            heightAuto: false
         });
         RemoveAllFigures();
         StartGame();
@@ -247,7 +249,8 @@ function splitShape(path1, path2){
             icon: "error",
             confirmButtonColor: '#000000',
             background: color, 
-            color: '#000000'
+            color: '#000000',
+            heightAuto: false
         });
         RemoveAllFigures();
         StartGame();
@@ -259,7 +262,8 @@ function splitShape(path1, path2){
             icon: "error",
             confirmButtonColor: '#000000',
             background: color, 
-            color: '#000000'
+            color: '#000000',
+            heightAuto: false
         });
         RemoveAllFigures();
         StartGame();

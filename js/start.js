@@ -22,7 +22,8 @@ function StartGame(){
             title:"Нужно ввести имя!",
             confirmButtonColor: '#000000',
             background: color, 
-            color: '#000000'
+            color: '#000000',
+            heightAuto: false,
         });
     }
     else{

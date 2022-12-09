@@ -12,7 +12,7 @@
     justify-content: center;
 }
 
-.game__title{
+#game__title{
     display: flex;
     flex-direction: column;
     width: 500px;
@@ -23,7 +23,7 @@
     align-items: center;
 }
 
-.game__name{
+#game__name{
     font-size: 100px;
     width: auto;
     font-family: Roboto;
@@ -31,7 +31,7 @@
     margin: 0 0 30px;
 }
 
-.start_game__button{
+#start_game__button{
     font-size: 20px;
     width: 300px;
     height: 40px;
@@ -42,9 +42,10 @@
     border-radius: 5px;
     display: flex;
     font-weight: bold;
+    font-family: Roboto;
 }
 
-.game__nickname{
+#game__nickname{
     width: 300px;
     height: 45px;
     margin: 0 0 40px;

@@ -6,7 +6,7 @@
     justify-content: center;
 }
 
-.game__name{
+#game__name{
     font-size: 100px;
     width: auto;
     font-family: Roboto;
@@ -16,9 +16,9 @@
 
 /* ----Levels-block---------------------------------------------- */
 
-.levels{
+#levels{
     border-radius: 10px;
-    width: 800px;
+    width: 760px;
     height: 400px;
     display: flex;
     flex-direction: column;
@@ -35,22 +35,24 @@
 }
 
 .levels__row{
-    padding: 10px 0px;
-    height: 100%;
     flex: 1 0 50%;
     display: flex;
-    justify-content: space-around;
     align-items: center;
+    justify-content: center;
+    width: 100%;
 }
 
 .level{
-    margin: 10px;
-    width: 150px;
-    height: 150px;
+    width: 130px;
+    height: 130px;
     display: flex;
     align-items: center;
     justify-content: center;
     border-radius: 10px;
+}
+
+.level:not(:last-child){
+    margin: 0 50px 0 0;
 }
 
 .level__number{
