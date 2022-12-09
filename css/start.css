@@ -58,10 +58,10 @@
     cursor: pointer;
 }
 
-.game__nickname::placeholder{
+#game__nickname::placeholder{
     color: white;
 }
 
-.game__nickname:focus::placeholder{
+#game__nickname:focus::placeholder{
     color: transparent;
 }
