@@ -58,7 +58,7 @@ h1,h2,h3,h4,h5,h6{font-size: inherit;font-weight: inherit;}
 }
 
 ._container{
-    max-width: 1140px;
+    max-width: 1000px;
     margin: 0px auto;
     box-sizing: content-box;
 }

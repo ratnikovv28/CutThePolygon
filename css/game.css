@@ -31,7 +31,7 @@
 /* ----Canvas-------------------------------------------------- */
 
 .game__canvas__class{
-    width: 90%;
-    height: 600px;
+    width: 80%;
+    height: 500px;
     border-radius: 10px;
 }

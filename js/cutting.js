@@ -173,7 +173,7 @@ function StartGame(){
     bestScore = GetBestScore(currentLevel);
 
     //Создание многоугольника
-    polygon = new Path.RegularPolygon(new Point(startPointX, startPointY), figure, 150);
+    polygon = new Path.RegularPolygon(new Point(startPointX, startPointY), figure, 120);
     polygon.strokeColor = 'white';
     polygon.strokeWidth = 6;
 
