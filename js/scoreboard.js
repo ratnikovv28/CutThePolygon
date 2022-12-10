@@ -8,7 +8,7 @@ allStorage();
 
 //Переход на страницу с уровнями
 function Exit(){
-    document.location.href = "/page/level.html"; 
+    document.location.href = "level.html"; 
 }
 
 //Получение и добавление информации о результатах игроков
