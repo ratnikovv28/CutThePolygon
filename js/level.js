@@ -7,12 +7,12 @@ function Exit(){
 
 //Переход на страницу с результатами
 function Scoreboard(){
-    document.location.href = "/page/scoreboard.html"; //Переходим на страницу заставки
+    document.location.href = "scoreboard.html"; //Переходим на страницу заставки
 }
 
 //Переход на уровень
 function GoToLevel(value){
-    document.location.href = "/page/game.html"; //Переходим на страницу c игрой в соотвествии с уровнем
+    document.location.href = "game.html"; //Переходим на страницу c игрой в соотвествии с уровнем
     localStorage.setItem('CurrentLevel', JSON.stringify(config[value - 1])) //Устанавливется текущий уровень в LocalStorage
 }
 

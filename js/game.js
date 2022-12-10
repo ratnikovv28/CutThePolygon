@@ -1,7 +1,7 @@
 /* ----Функции------------------------------------------------- */
 
 function Exit(){
-    document.location.href = "/page/level.html"; //Переходим на страницу c игрой в соотвествии с уровнем
+    document.location.href = "level.html"; //Переходим на страницу c игрой в соотвествии с уровнем
 }
 
 function SetCut(){

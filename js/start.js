@@ -42,7 +42,7 @@ function StartGame(){
             localStorage.setItem(nicknameText, JSON.stringify(playerScore)); //Загрузка данных о пользователе в LocalStorage
         }
         localStorage.setItem('CurrentPlayer', nicknameText);
-        document.location.href = "/page/level.html"; //Переходим на страницу с выбором уровня
+        document.location.href = "page/level.html"; //Переходим на страницу с выбором уровня
     }
 }
 
