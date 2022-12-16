@@ -14,7 +14,6 @@ function generateRandomColorHex() {
 
 //Запуск игры
 function StartGame(){
-    // localStorage.clear()
     var nicknameText = nickName.value; //Имя пользователя из поля
 
     if(isEmpty(nicknameText)){
